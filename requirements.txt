@@ -1,3 +1,10 @@
 python-dotenv
 pandas
 numpy
+pymongo
+certifi
+
+# -e . ## -e. refers to -e . setup.py  build package from setup.py
+## we can put it at last when our entire packages is built
+
+# useful when you try to deploy you package in cloud or pypy
