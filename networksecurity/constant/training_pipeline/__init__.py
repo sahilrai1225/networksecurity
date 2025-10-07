@@ -15,6 +15,8 @@ FILE_NAME:str="phisingData.csv"
 TRAIN_FILE_NAME:str="train.csv"
 TEST_FILE_NAME:str="test.csv"
 
+SCHEMA_FILE_PATH=os.path.join("data_schema","schema.yaml")  # it is generic info 
+## and in data_schema folder it will be present
 """
 Data ingestion related constant start with DATA_INGESTION VAR NAME which we require
 """
@@ -25,3 +27,16 @@ DATA_INGESTION_DIR_NAME:str="data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str ="feature_store"
 DATA_INGESTION_INGESTED_DIR: str ="ingested"
 DATA_INGESTION_TRAIN_TEST_SPLIT_RATION: float =0.2
+
+
+
+"""
+Data Validation realetd constant start wuth DATA_VALIDATION_VAR_NAME
+    
+    """
+    
+DATA_VALIDATION_DIR_NAME : str = "data validation"
+DATA_VALIDATION_VALID_DIR: str = "validated"
+DATA_VALIDATION_INVALID_DIR: str = "invalid"
+DATA_VALIDATION_DRIFT_REPORT_DIR: str = "drift_report"
+DATA_VALIDATION_DRIFT_REPORT_FILE_NAME : str = "report.yaml"
