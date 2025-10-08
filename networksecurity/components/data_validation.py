@@ -159,7 +159,8 @@ class DataValidation:
                 invalid_train_file_path=None,
                 invalid_test_file_path=None,
                 drift_report_file_path=self.data_validation_config.drift_report_file_path,
-            )       
+            )
+            return data_validation_artifact     
             
             
         except Exception as e:
