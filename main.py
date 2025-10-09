@@ -1,10 +1,11 @@
 from networksecurity.components.data_ingestion import DataIngestion # class
 from networksecurity.components.data_validation import DataValidation
 from networksecurity.components.data_tranformation import DataTransformation
+from networksecurity.components.model_trainer import ModelTrainer
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
 ## to run DataIngestion we need to give DataIngestionConfig as it has patameter 
-from networksecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTranformationConfig
+from networksecurity.entity.config_entity import DataIngestionConfig,DataValidationConfig,DataTranformationConfig,ModelTrainerConfig
 from networksecurity.entity.config_entity import TrainingPipelineConfig
 from bson import son
 import sys
@@ -36,6 +37,11 @@ if __name__=="__main__":
         logging.info("Data Transformation Completed")
         print(data_transformation_artifact)
         
+        logging.info("Model Training Started")
+        modeltrainerconfig=ModelTrainerConfig(trainingpiplelineconfig)
+        model_trainer=ModelTrainer(model_trainer_config=modeltrainerconfig,data_tranformtion_artifact=data_transformation_artifact)
+        model_trainer_artifact=model_trainer.initiate_model_trainer()
         
+        logging.info("Model Trainer Artifact completed")
     except Exception as e:
         raise NetworkSecurityException(e,sys)        

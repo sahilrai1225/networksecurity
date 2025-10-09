@@ -1,0 +1,14 @@
+artifact_uri: file:///home/abc/Desktop/Network%20Security/mlruns/0/b2bc54960d894edea680d4bdee252a04/artifacts
+end_time: 1760035369672
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: b2bc54960d894edea680d4bdee252a04
+run_name: funny-foal-229
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760035369660
+status: 4
+tags: []
+user_id: abc

@@ -1,0 +1,14 @@
+artifact_uri: file:///home/abc/Desktop/Network%20Security/mlruns/0/3c4f32517c7b4ee88b7b2205a008cdf6/artifacts
+end_time: 1760037187301
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3c4f32517c7b4ee88b7b2205a008cdf6
+run_name: capricious-croc-882
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760037185784
+status: 3
+tags: []
+user_id: abc

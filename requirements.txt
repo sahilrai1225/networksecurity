@@ -6,7 +6,7 @@ scikit-learn
 pymongo>=4.3.3
 dill ## uselful to pickle our file
 pyaml
-
+mlflow
 # -e . ## -e. refers to -e . setup.py  build package from setup.py
 ## we can put it at last when our entire packages is built
 

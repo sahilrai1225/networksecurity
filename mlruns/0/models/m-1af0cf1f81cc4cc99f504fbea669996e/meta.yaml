@@ -1,0 +1,10 @@
+artifact_location: file:///home/abc/Desktop/Network%20Security/mlruns/0/models/m-1af0cf1f81cc4cc99f504fbea669996e/artifacts
+creation_timestamp: 1760036434491
+experiment_id: '0'
+last_updated_timestamp: 1760036435860
+model_id: m-1af0cf1f81cc4cc99f504fbea669996e
+model_type: null
+name: model
+source_run_id: 37f2b9a1447343ef8a2fc755cb9e37b7
+status: 2
+status_message: null
