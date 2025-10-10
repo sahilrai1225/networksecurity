@@ -1,6 +1,5 @@
 import os
 import sys
-
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
 
@@ -24,14 +23,16 @@ from sklearn.ensemble import (
 
 import mlflow
 
+import dagshub
+dagshub.init(repo_owner='sahilrai1225', repo_name='networksecurity', mlflow=True)
 
 ## : it define type of object /.../ output ,, -> define retrun type
 class ModelTrainer:
-    def __init__(self,model_trainer_config:ModelTrainerConfig,data_tranformtion_artifact:DataTransformationArtifact):
+    def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
         try:
             # intializing our variable
             self.model_trainer_config=model_trainer_config
-            self.data_transformation_artifact=data_tranformtion_artifact
+            self.data_transformation_artifact=data_transformation_artifact
         
         except Exception as e:
             raise NetworkSecurityException(e,sys)
@@ -48,7 +49,9 @@ class ModelTrainer:
             mlflow.log_metric("precision",precision_score)
             mlflow.log_metric("recall",recall_score)
             
-            mlflow.sklearn.log_model(sk_model=best_model, name="model")
+            mlflow.sklearn.log_model(best_model,"model")
+
+
 
         
         
@@ -138,6 +141,8 @@ class ModelTrainer:
         save_object(self.model_trainer_config.trained_model_file_path,obj=Network_Model)
         ## saveobject means we are going to save our pickle file into the path we got in trained model path
         
+        
+        save_object("final_model/model.pkl",best_model)
         
         ## Model Trainer Artifacts
         model_trainer_artifact=ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.trained_model_file_path,

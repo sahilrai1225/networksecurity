@@ -6,7 +6,10 @@ scikit-learn
 pymongo>=4.3.3
 dill ## uselful to pickle our file
 pyaml
-mlflow
+mlflow==2.9.2
+dagshub
+fastapi
+uvicorn  ## both this will require for frontend and app.py
 # -e . ## -e. refers to -e . setup.py  build package from setup.py
 ## we can put it at last when our entire packages is built
 

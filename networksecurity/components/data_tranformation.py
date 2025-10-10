@@ -111,6 +111,10 @@ class DataTransformation:
             # numpy array will be saved in tranformed_train/test_file_path folder
             save_object(self.data_transformation_config.transformed_object_file_path,preprocessor_object,)
             
+            
+            ## save pkl file in final_model 
+            
+            save_object("final_model/preprocessor.pkl",preprocessor_object)
             ## save object is getting called from utils.py which ahve this function to save pkl file
             
             ## Preparing Artifacts
